@@ -85,7 +85,7 @@ O banco de dados contém cinco tabelas principais:
 
  # ----------------------------------------------------------
 
-# Sistema de Gerenciamento de Eventos
+# Sistema de Gerenciamento de Eventos - SQLite
 
 Este projeto é um sistema de gerenciamento de eventos desenvolvido para fins acadêmicos, utilizando o banco de dados SQLite. Ele oferece funcionalidades para organizar eventos, gerenciar participantes, palestrantes e emitir certificados.
 
@@ -107,3 +107,90 @@ O sistema é composto por tabelas que organizam as informações de maneira rela
 - **Inscricao**: Relaciona participantes e eventos.
 - **Certificado**: Gerencia a emissão de certificados.
 
+ # ----------------------------------------------------------
+
+ # Sistema de Agendamento de Consultas Médicas - SQLite
+
+Este projeto implementa um sistema simples de agendamento de consultas médicas utilizando o banco de dados SQLite. O sistema é composto por quatro tabelas principais: **Medico**, **Paciente**, **Consulta** e **Prontuario**, que armazenam informações sobre os médicos, pacientes, agendamentos e registros médicos, respectivamente.
+
+## Funcionalidades
+
+- **Cadastro de Médicos e Pacientes**: Adiciona médicos e pacientes ao sistema.
+- **Agendamento de Consultas**: Registra consultas entre médicos e pacientes, incluindo data e horário.
+- **Prontuário Médico**: Registra o diagnóstico e outras observações durante as consultas.
+- **Consultas Realizadas**: Permite visualizar consultas realizadas por médico e por período específico.
+
+## Tecnologias
+
+- **SQLite**: Banco de dados utilizado para armazenar e gerenciar as informações.
+- **SQL**: Linguagem utilizada para realizar operações no banco de dados.
+
+## Como Usar
+
+1. **Criar Banco de Dados**: Execute os scripts SQL para criar as tabelas.
+2. **Inserir Dados**: Use os comandos `INSERT INTO` para adicionar médicos, pacientes, consultas e prontuários.
+3. **Consultar Dados**: Realize consultas específicas para visualizar informações sobre médicos, pacientes, consultas e prontuários.
+
+# ----------------------------------------------------------
+
+# Sistema de Controle de Restaurante - SQLite
+
+Este sistema foi desenvolvido para gerenciar informações de clientes, funcionários, pratos, ingredientes e pedidos de um restaurante. Utilizando o banco de dados SQLite, ele armazena dados essenciais como o nome e telefone dos clientes, os cargos dos funcionários, o nome e preço dos pratos, além do controle de estoque dos ingredientes.
+
+## Funcionalidades
+
+- **Cadastro de Clientes**: Registra nome e telefone dos clientes.
+- **Cadastro de Funcionários**: Armazena dados dos funcionários e cargos.
+- **Cadastro de Pratos**: Inclui pratos com preço e ingredientes.
+- **Controle de Estoque de Ingredientes**: Gerencia a quantidade de ingredientes.
+- **Pedidos e Relacionamento**: Registra pedidos e associa pratos aos ingredientes.
+
+## Banco de Dados
+
+O sistema utiliza o banco SQLite com as seguintes tabelas:
+- **Cliente**
+- **Funcionario**
+- **Prato**
+- **Ingrediente**
+- **Pedido**
+- **Pedido_Prato**
+- **Prato_Ingrediente**
+
+## Como usar
+
+1. **Instalar SQLite**: Instale o SQLite no seu sistema.
+2. **Criar o Banco de Dados**: Execute os comandos SQL para criar as tabelas.
+3. **Inserir Dados**: Adicione dados de clientes, funcionários, pratos, ingredientes e pedidos.
+4. **Consultas**: Realize consultas para verificar consumo de ingredientes, estoque e pedidos.
+
+## Consultas Exemplos
+
+- **Consumo de Ingredientes**: Exibe o consumo total de cada ingrediente por prato.
+- **Estoque de Ingredientes**: Mostra a quantidade de ingredientes no estoque.
+- **Pedidos por Cliente**: Lista os pedidos feitos pelos clientes e seus pratos.
+
+# ----------------------------------------------------------
+
+# Sistema de Gerenciamento de Projetos - SQLite
+
+Este sistema foi desenvolvido para gerenciar projetos, clientes, colaboradores e tarefas, utilizando o banco de dados SQLite. Ele permite o registro de informações sobre clientes, colaboradores, projetos e tarefas, além de gerar relatórios sobre o andamento dos projetos.
+
+## Funcionalidades
+
+- Cadastro de Clientes, Colaboradores, Projetos e Tarefas.
+- Atribuição de Tarefas aos Colaboradores.
+- Relatórios de Progresso dos Projetos e Tarefas.
+
+## Estrutura do Banco de Dados
+
+- **Cliente**: Dados dos clientes.
+- **Colaborador**: Dados dos colaboradores.
+- **Projeto**: Dados dos projetos, relacionados aos clientes.
+- **Tarefa**: Tarefas associadas aos projetos.
+- **Tarefa_Colaborador**: Relaciona as tarefas aos colaboradores.
+
+## Como Rodar
+
+1. Clone o repositório.
+2. Importe o banco SQLite e execute as consultas SQL.
+3. Cadastre e gerencie os projetos e tarefas.
