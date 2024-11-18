@@ -38,8 +38,7 @@ Este projeto é um sistema simples de gerenciamento de bibliotecas, desenvolvido
 
    Primeiro, execute o script SQL para criar as tabelas necessárias no banco de dados SQLite:
 
-   ```
-   -- Criação da tabela Usuario
+ ```sql
    CREATE TABLE Usuario (
        ID INTEGER PRIMARY KEY AUTOINCREMENT,
        Nome VARCHAR(100),
@@ -91,7 +90,7 @@ Este projeto é um sistema simples de gerenciamento de bibliotecas, desenvolvido
 Após a criação das tabelas, insira dados iniciais. Exemplo:
 
 - Inserir usuários
-```
+ ```sql
 INSERT INTO Usuario (Nome, Matricula, Categoria, Contato)
 VALUES ('Gabriel Vinicius', '20245642', 'Aluno', 'gabriel@gmail.com');
 ```
@@ -101,7 +100,7 @@ VALUES ('Gabriel Vinicius', '20245642', 'Aluno', 'gabriel@gmail.com');
 Utilize os seguintes exemplos de consultas para gerar relatórios úteis:
 
 - Relatório de livros mais emprestados:
-```
+ ```sql
 SELECT Livro.Titulo, COUNT(Emprestimo.ID) AS Total_De_Emprestimos
 FROM Livro
 JOIN Emprestimo ON Livro.ID = Emprestimo.ID_Livro
@@ -110,7 +109,7 @@ ORDER BY Total_De_Emprestimos DESC;
 ```
 
 - Usuários com multas pendentes:
-```
+ ```sql
 SELECT Usuario.Nome, SUM(Multa.Valor) AS Total_De_Multas
 FROM Usuario
 JOIN Emprestimo ON Usuario.ID = Emprestimo.ID_Usuario
@@ -194,7 +193,7 @@ Execute o seguinte script no SQLite para criar as tabelas:
 ## Inserção de Dados
 
 - Adicione dados iniciais com o seguinte script:
-```
+ ```sql
 INSERT INTO Cliente (Nome, Endereco, Telefone) VALUES 
 ('Gabriel Vinicius', 'Rua A, 562', '1111-2222'),
 ('Patricia Freitas', 'Rua B, 921', '3333-4444');
@@ -217,14 +216,14 @@ INSERT INTO Pedido_Produto (PedidoID, ProdutoID, Quantidade) VALUES
 ```
 ## Relatórios
 - Total de pedidos por cliente:
-```
+ ```sql
 SELECT Cliente.Nome AS Cliente, COUNT(Pedido.PedidoID) AS Total_De_Pedidos
 FROM Cliente
 JOIN Pedido ON Cliente.ClienteID = Pedido.ClienteID
 GROUP BY Cliente.Nome;
 ```
 - Produtos mais vendidos:
-```
+ ```sql
 SELECT Produto.Nome AS Produto, SUM(Pedido_Produto.Quantidade) AS Total_Vendido
 FROM Produto
 JOIN Pedido_Produto ON Produto.ProdutoID = Pedido_Produto.ProdutoID
@@ -232,7 +231,7 @@ GROUP BY Produto.Nome
 ORDER BY Total_Vendido DESC;
 ```
 - Total de vendas por período:
-```
+ ```sql
 SELECT Pedido.Data_Do_Pedido, SUM(Pedido_Produto.Quantidade * Produto.Preco) AS Total_De_Vendas
 FROM Pedido
 JOIN Pedido_Produto ON Pedido.PedidoID = Pedido_Produto.PedidoID
@@ -273,7 +272,7 @@ Criação das Tabelas
 
 Execute o seguinte script no SQLite para criar as tabelas:
 
-```
+ ```sql
 CREATE TABLE Locais (
     id_local INTEGER PRIMARY KEY AUTOINCREMENT,
     nome_local VARCHAR(100),
@@ -325,7 +324,7 @@ CREATE TABLE Certificado (
 # Inserção de Dados
 Adicione dados iniciais com o seguinte script:
 
-```
+ ```sql
 INSERT INTO Locais (nome_local, endereco) VALUES 
 ('Centro de Convenções', 'Rua X, 123'),
 ('Auditório A', 'Avenida Y, 456');
@@ -339,7 +338,7 @@ INSERT INTO Evento (nome_evento, data_evento, descricao, id_local) VALUES
 ## Relatórios
 1. Participantes de um Evento:
 
-```
+ ```sql
 SELECT p.nome, p.email, p.telefone
 FROM Participante p
 JOIN Inscricao i ON p.id_participante = i.id_participante
@@ -347,7 +346,7 @@ WHERE i.id_evento = 1;
 ```
 2. Eventos por Local:
 
-```
+ ```sql
 SELECT e.nome_evento, e.data_evento
 FROM Evento e
 JOIN Locais l ON e.id_local = l.id_local
@@ -414,7 +413,7 @@ CREATE TABLE Prontuario (
 2. Inserção de dados
 Use os comandos abaixo para adicionar informações iniciais ao banco:
 
-```
+ ```sql
 INSERT INTO Medico (nome, especialidade) VALUES ('Dr. Carlos Silva', 'Cardiologista');
 INSERT INTO Medico (nome, especialidade) VALUES ('Dra. Ana Souza', 'Pediatra');
 
@@ -429,7 +428,7 @@ VALUES (1, 'Paciente apresenta pressão alta e será monitorado.');
 ```
 3. Consultas úteis
 - Consultas realizadas por um médico:
-```
+ ```sql
 SELECT m.nome AS Medico, p.nome AS Paciente, c.data_consulta, c.horario_consulta
 FROM Consulta c
 JOIN Medico m ON c.id_medico = m.id_medico
@@ -437,7 +436,7 @@ JOIN Paciente p ON c.id_paciente = p.id_paciente
 WHERE m.nome = 'Dr. Carlos Silva';
 ```
 - Prontuário completo de um paciente:
-```
+ ```sql
 SELECT p.nome AS Paciente, m.nome AS Medico, pr.descricao, c.data_consulta
 FROM Prontuario pr
 JOIN Consulta c ON pr.id_consulta = c.id_consulta
@@ -540,7 +539,7 @@ CREATE TABLE Prato_Ingrediente (
 ## Inserção de Dados
 Adicione dados iniciais com o seguinte script:
 
-```
+ ```sql
 INSERT INTO Cliente (nome, telefone) VALUES ('Gabriel Vinicius', '11987654321');
 INSERT INTO Cliente (nome, telefone) VALUES ('Patricia Freitas', '11976543210');
 
@@ -557,7 +556,7 @@ INSERT INTO Ingrediente (nome, quantidade_no_estoque, unidade) VALUES ('Alface',
 ## Relatórios
 - Consumo de Ingredientes:
 
-```
+ ```sql
 SELECT p.nome AS Prato, i.nome AS Ingrediente, 
        pi.quantidade * COUNT(pp.id_prato) AS Consumo_Total, 
        i.quantidade_no_estoque AS Estoque_Atual
@@ -569,7 +568,7 @@ GROUP BY p.nome, i.nome;
 ```
 - Pedidos por Cliente:
 - 
-```
+ ```sql
 SELECT c.nome AS Cliente, p.nome AS Prato, ped.data_do_pedido
 FROM Pedido ped
 JOIN Pedido_Prato pp ON ped.id_pedido = pp.id_pedido
@@ -653,7 +652,7 @@ CREATE TABLE Tarefa_Colaborador (
 ## Inserção de Dados
 Adicione dados iniciais com o seguinte script:
 
-```
+ ```sql
 INSERT INTO Cliente (nome, email) VALUES 
 ('Empresa A', 'contato@empresaA.com'),
 ('Empresa B', 'contato@empresaB.com');
@@ -679,14 +678,14 @@ INSERT INTO Tarefa_Colaborador (id_tarefa, id_colaborador) VALUES
 ```
 ## Consultas de Relatórios
 - Relatório de Progresso do Projeto:
-```
+ ```sql
 SELECT p.nome AS Projeto, t.nome AS Tarefa, t.status
 FROM Tarefa t
 JOIN Projeto p ON t.id_projeto = p.id_projeto
 WHERE p.nome = 'Sistema E-commerce';
 ```
 - Relatório de Tarefas Atribuídas a um Colaborador:
-```
+ ```sql
 SELECT c.nome AS Colaborador, t.nome AS Tarefa, t.status, p.nome AS Projeto
 FROM Tarefa_Colaborador tc
 JOIN Tarefa t ON tc.id_tarefa = t.id_tarefa
@@ -695,7 +694,7 @@ JOIN Projeto p ON t.id_projeto = p.id_projeto
 WHERE c.nome = 'Carlos Souza';
 ```
 - Tarefas Concluídas em um Projeto:
-```
+ ```sql
 SELECT t.nome AS Tarefa, p.nome AS Projeto
 FROM Tarefa t
 JOIN Projeto p ON t.id_projeto = p.id_projeto
