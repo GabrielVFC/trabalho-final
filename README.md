@@ -83,5 +83,27 @@ O banco de dados contém cinco tabelas principais:
 2. Importe o script SQL fornecido no projeto.
 3. Execute as consultas para inserir dados e gerar os relatórios necessários.
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Sistema de Gerenciamento de Eventos
+
+Este projeto é um sistema de gerenciamento de eventos desenvolvido para fins acadêmicos, utilizando o banco de dados SQLite. Ele oferece funcionalidades para organizar eventos, gerenciar participantes, palestrantes e emitir certificados.
+
+## Principais Funcionalidades
+
+1. **Cadastro de Locais e Eventos**: Armazena informações sobre locais e eventos, como nome, endereço, data e descrição.
+2. **Gestão de Participantes e Palestrantes**: Permite registrar dados de participantes e palestrantes, incluindo informações de contato e biografia.
+3. **Inscrições**: Gerencia a relação entre participantes e eventos.
+4. **Certificados**: Gera certificados para participantes de eventos.
+5. **Relatórios**: Permite consultar participantes inscritos, certificados emitidos e eventos realizados em locais específicos.
+
+## Estrutura do Banco de Dados
+
+O sistema é composto por tabelas que organizam as informações de maneira relacional:
+- **Locais**: Registra locais disponíveis para eventos.
+- **Evento**: Armazena informações sobre os eventos.
+- **Participante**: Contém dados dos participantes.
+- **Palestrante**: Armazena dados dos palestrantes.
+- **Inscricao**: Relaciona participantes e eventos.
+- **Certificado**: Gerencia a emissão de certificados.
 
