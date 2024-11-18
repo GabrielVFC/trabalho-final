@@ -43,7 +43,7 @@ Este projeto é um sistema simples de gerenciamento de bibliotecas, desenvolvido
 3. **Consultas**  
    Utilize os exemplos de `SELECT` para gerar relatórios úteis e gerenciar informações da biblioteca.
 
-   **--------------------------------------------------------------------------------------------------------------------**
+   # --------------------------------------------------------------------------------------------------------------------
 
 # Sistema de Gestão de Vendas - SQLite
 
@@ -83,7 +83,7 @@ O banco de dados contém cinco tabelas principais:
 2. Importe o script SQL fornecido no projeto.
 3. Execute as consultas para inserir dados e gerar os relatórios necessários.
 
-# --------------------------------------------------------------------------------------------------------------------------------------------------
+ # --------------------------------------------------------------------------------------------------------------------
 
 # Sistema de Gerenciamento de Eventos
 
