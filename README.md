@@ -45,7 +45,7 @@ Este projeto é um sistema simples de gerenciamento de bibliotecas, desenvolvido
 
    **--------------------------------------------------------------------------------------------------------------------**
 
-# Sistema de Gestão de Vendas - Trabalho Acadêmico
+# Sistema de Gestão de Vendas - SQLite
 
 Este projeto é um sistema de gestão de vendas desenvolvido para fins acadêmicos, utilizando o banco de dados SQLite. Ele foi projetado para gerenciar informações sobre clientes, produtos, categorias, pedidos e itens de pedido. Além disso, permite a geração de relatórios de vendas.
 
