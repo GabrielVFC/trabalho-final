@@ -83,7 +83,7 @@ O banco de dados contém cinco tabelas principais:
 2. Importe o script SQL fornecido no projeto.
 3. Execute as consultas para inserir dados e gerar os relatórios necessários.
 
-#--------------------------------------------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Sistema de Gerenciamento de Eventos
 
