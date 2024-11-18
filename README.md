@@ -1,5 +1,6 @@
 # trabalho-final
 Sistema de Gerenciamento de Biblioteca - SQLite
+
 Este projeto é um sistema simples de gerenciamento de bibliotecas, desenvolvido como parte de um trabalho acadêmico, utilizando o banco de dados SQLite. Abaixo estão descritas suas funcionalidades principais e estrutura.
 
 Funcionalidades
