@@ -358,7 +358,7 @@ WHERE l.nome_local = 'Centro de Convenções';
 
  # ----------------------------------------------------------
 
-# Sistema de Agendamento de Consultas Médicas
+# Sistema de Agendamento de Consultas Médicas - SQLite
 
 Este projeto implementa um sistema simples de agendamento de consultas médicas utilizando o banco de dados SQLite. Ele organiza informações de médicos, pacientes, consultas e prontuários.
 
