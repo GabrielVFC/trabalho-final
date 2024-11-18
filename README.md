@@ -42,3 +42,46 @@ Este projeto é um sistema simples de gerenciamento de bibliotecas, desenvolvido
 
 3. **Consultas**  
    Utilize os exemplos de `SELECT` para gerar relatórios úteis e gerenciar informações da biblioteca.
+
+   **--------------------------------------------------------------------------------------------------------------------**
+
+# Sistema de Gestão de Vendas - Trabalho Acadêmico
+
+Este projeto é um sistema de gestão de vendas desenvolvido para fins acadêmicos, utilizando o banco de dados SQLite. Ele foi projetado para gerenciar informações sobre clientes, produtos, categorias, pedidos e itens de pedido. Além disso, permite a geração de relatórios de vendas.
+
+## Estrutura do Banco de Dados
+
+O banco de dados contém cinco tabelas principais:
+
+1. **Cliente**: Armazena informações sobre os clientes (ID, nome, endereço, telefone).
+2. **Categoria**: Gerencia as categorias dos produtos.
+3. **Produto**: Registra produtos com nome, preço, estoque e sua respectiva categoria.
+4. **Pedido**: Representa as vendas realizadas, relacionando-se com clientes.
+5. **Pedido_Produto**: Conecta pedidos aos produtos comprados, incluindo a quantidade adquirida.
+
+## Funcionalidades
+
+1. **Cadastro de dados**:
+   - Clientes.
+   - Categorias de produtos.
+   - Produtos.
+   - Pedidos e seus itens.
+
+2. **Relatórios**:
+   - Quantidade de pedidos por cliente.
+   - Produtos mais vendidos.
+   - Vendas totais por período.
+
+## Ferramentas Utilizadas
+
+- **SQLite**: Banco de dados leve e eficiente para armazenamento e consultas.
+- **SQL**: Linguagem utilizada para criação de tabelas, inserção de dados e geração de relatórios.
+
+## Como Executar
+
+1. Configure o SQLite e um cliente de banco de dados de sua preferência.
+2. Importe o script SQL fornecido no projeto.
+3. Execute as consultas para inserir dados e gerar os relatórios necessários.
+
+
+
