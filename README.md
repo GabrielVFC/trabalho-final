@@ -1,4 +1,6 @@
 # trabalho-final
+## Integrantes do Trabalho:
+Gabriel Vinicius Freitas Costa
 
 # Sistema de Gerenciamento de Biblioteca - SQLite
 
